@@ -1,3 +1,0 @@
-/home/christian/Downloads/git/routeros/pcap_parsers/winbox_pcap_parser/build/CMakeFiles/rebuild_cache.dir
-/home/christian/Downloads/git/routeros/pcap_parsers/winbox_pcap_parser/build/CMakeFiles/winbox_pcap_decrypt.dir
-/home/christian/Downloads/git/routeros/pcap_parsers/winbox_pcap_parser/build/CMakeFiles/edit_cache.dir

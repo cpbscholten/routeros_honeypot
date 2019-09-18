@@ -1,0 +1,14 @@
+# Example crontab for a routeros honeypot
+# Replace the crontab of the user with this file and update the file locations to the scripts
+#
+# m h  dom mon dow   command
+
+# starts the api snooper every 5 minutes to retrieve the latest logs from the honeypot and stores it int he logs directory tagged with name and date
+*/5 * * * * /usr/bin/python3 /home/honeypot/api-snooper/routeros_snooper.py > /tmp/api_snooper_listener.log 2>&1
+
+# starts a tcpdump capture every 10 minutes and stores it tagged with honeypot name and date and time in the tcpdump directory
+*/10 * * * * sudo /bin/bash /home/honeypot/tcpdump.sh > /tmp/tcpdump_listener.log 2>&1
+
+# reset the honeypot to the snapshot everyday at 00:00:00 or at a reboot
+0 0 * * * /bin/bash /home/honeypot/vmreset.sh > /tmp/vmreset_listener.log 2>&1
+@reboot /bin/bash /home/honeypot/vmreset.sh > /tmp/vmreset_reboot_listener4.log 2>&1

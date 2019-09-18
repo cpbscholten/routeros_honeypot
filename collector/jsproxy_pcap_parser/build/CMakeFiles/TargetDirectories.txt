@@ -1,0 +1,3 @@
+/home/christian/Downloads/git/routeros/pcap_parsers/jsproxy_pcap_parser/build/CMakeFiles/rebuild_cache.dir
+/home/christian/Downloads/git/routeros/pcap_parsers/jsproxy_pcap_parser/build/CMakeFiles/jsproxy_pcap_parser.dir
+/home/christian/Downloads/git/routeros/pcap_parsers/jsproxy_pcap_parser/build/CMakeFiles/edit_cache.dir

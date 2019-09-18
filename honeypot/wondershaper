@@ -1,0 +1,9 @@
+[wondershaper]
+# Adapter
+IFACE="vboxnet0"
+
+# Downloa drate in kbps
+DSPEED="1024"
+
+# Upload rate in kbps
+USPEED="1024"

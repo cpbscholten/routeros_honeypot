@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../../common/winbox_message.hpp
+map
+-
+vector
+-
+string
+-
+boost/array.hpp
+-
+boost/cstdint.hpp
+-
+
+/home/christian/Downloads/git/routeros/pcap_parsers/winbox_pcap_parser/src/main.cpp
+cstdlib
+-
+pcap.h
+-
+string
+-
+iostream
+-
+arpa/inet.h
+-
+boost/lexical_cast.hpp
+-
+boost/cstdint.hpp
+-
+boost/program_options.hpp
+-
+boost/algorithm/string/replace.hpp
+-
+boost/format.hpp
+-
+winbox_message.hpp
+/home/christian/Downloads/git/routeros/pcap_parsers/winbox_pcap_parser/src/winbox_message.hpp
+

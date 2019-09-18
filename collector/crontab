@@ -1,0 +1,24 @@
+# Example crontab for the collector pc of the honeypots
+# Replace the crontab of the user with this file and update the file for each honeypot to process
+#
+# m h  dom mon dow   command
+
+# add these two lines for each honeypot and update the name and ip
+11 * * * * /bin/bash /home/ubuntu/copy_tcpdump.sh honeypot_country_name 192.168.0.0 > /tmp/honeypot_tcpdump_listener.log 2>&1
+1 * * * * /bin/bash /home/ubuntu/copy_logs.sh honeypot_country_name 192.168.0.0 > /tmp/honeypot_logs_listener.log 2>&1
+
+# merge and filter the tcpdump captures for each day for each honeypot for the capture of yesterday
+30 0 * * * /bin/bash /home/ubuntu/merge_yesterday_captures.sh > /tmp/tcpdump_listener.log 2>&1
+
+# create a fatt file for each honeypot for the captures yesterday
+40 0 * * * /bin/bash /home/ubuntu/daily_update_fattionary.sh > /tmp/fatt_listener.log 2>&1
+
+# merge all logs for each honeypot for yesterday
+20 0 * * * /bin/bash /home/ubuntu/daily_merge_logs.sh > /tmp/daily_merge_listener.log 2>&1
+
+# decrypt the winbox packets for all honeypots for yesterday
+20 0 * * * /bin/bash /home/ubuntu/daily_winbox_parse_csv.sh > /tmp/winbox_listener.log 2>&1
+
+# commented out because of gibberish bug
+# decrypt the jsproxy packets for all honeypots for yesterday
+# 20 0 * * * /bin/bash /home/ubuntu/daily_winbox_parse_csv.sh > /tmp/jsproxy_listener.log 2>&1

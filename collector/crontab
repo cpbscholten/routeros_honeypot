@@ -18,7 +18,3 @@
 
 # decrypt the winbox packets for all honeypots for yesterday
 20 0 * * * /bin/bash /home/ubuntu/daily_winbox_parse_csv.sh > /tmp/winbox_listener.log 2>&1
-
-# commented out because of gibberish bug
-# decrypt the jsproxy packets for all honeypots for yesterday
-# 20 0 * * * /bin/bash /home/ubuntu/daily_winbox_parse_csv.sh > /tmp/jsproxy_listener.log 2>&1

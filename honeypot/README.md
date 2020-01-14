@@ -68,4 +68,5 @@ The contab is used to call all scripts at the correct time. The crontab also out
 - Update the location to the `vmreset.sh` script in line 13 and 14
 
 # Other steps
-- add the ssh key of the collector to the authorized hosts
+add the ssh key of the collector to the authorized keys to allow access to the virtual machine:
+- Copy the contents of the generated public key to ~/.ssh/authorized_keys

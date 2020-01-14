@@ -96,3 +96,6 @@ In order to automatically run all scripts, some modifications need to be made to
 Copy line 7 and 8 for each extra honeypot you might want to add, update the ip adress and the name of the honeypot. Ensure that a subdirectory exists in the tcpdump and logs directory with the name of the honeypot (This name should be the same as use in the honeypot).
 
 And finally update the locations to the scripts.
+
+## Other steps
+- Create an SSH key: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`

@@ -10,7 +10,7 @@ import tablib
 # config
 # change these values before running the script
 routeros_6_43_or_higher = False
-honeypot_name = "honeypot"
+honeypot_name = "HONEYPOT" #should be in uppercase
 username = 'admin'
 password = ''
 host = '192.168.0.1' # ip of the routeros router

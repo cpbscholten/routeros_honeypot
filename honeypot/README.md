@@ -69,4 +69,4 @@ The contab is used to call all scripts at the correct time. The crontab also out
 
 # Other steps
 add the ssh key of the collector to the authorized keys to allow access to the virtual machine:
-- Copy the contents of the generated public key to ~/.ssh/authorized_keys
+- Copy the contents of the generated public key to `~/.ssh/authorized_keys`

@@ -1,4 +1,4 @@
-# routeros_honeypot Honeypot scripts
+# RouterOS Honeypot scripts
 This directory contains all scripts and config files for a honeypot with RouterOS.
 
 ## requirements
@@ -35,6 +35,7 @@ Set up from the included Readme and update the following settings:
 TCPDUMP is configured in the tcpdump.sh to create capture files of 10 minutes. This script is called every ten minutes from the crontab.
 - change the name of the honeypot in the filename (uppercase)
 - Change the destination folder of the capture
+- Change the hostname of the virtual machine. This ensures that all traffic from collecting the .pcap files is not captured as well. This reduces the file size significantly.
 - optionally change the duration of each capture
 
 ## set up the iptables rules

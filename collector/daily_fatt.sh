@@ -4,12 +4,13 @@ dates=("$@")
 honeypots=(australia brazil india china-hk netherlands us-central)
 # download this from https://github.com/0x4D31/fatt
 fatt_dir="/home/collector/fatt-master/"
-dir="/home/collector/"
+dir="/home/collector/tcpdump/"
+fationary_dir="/home/collector/fatt/"
 for honeypot in ${honeypots[*]}
 do
         for date in ${dates[*]}
         do
                 echo "daily_fatt ${honeypot} ${date}"
-                eval "python3 ${fatt_dir}fatt.py -r ${dir}/tcpdump/${honeypot}/daily_merge_filtered/daily_merge_filtered_${honeypot}_${date}.pcap -j -o ${dir}fatt/${honeypot}/daily_fatt_${honeypot}_${date}.log"
+                eval "python3 ${fatt_dir}fatt.py -r ${dir}/${honeypot}/daily_merge_filtered/daily_merge_filtered_${honeypot}_${date}.pcap -j -o ${fattionary_dir}${honeypot}/daily_fatt_${honeypot}_${date}.log"
         done
 done

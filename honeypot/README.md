@@ -17,6 +17,12 @@ This directory contains all scripts and config files for a honeypot with RouterO
 - create a Virtual Machine with the downloaded image
 - choose the host only adapter as the adapter of the virtual machine
 - Add users and a password if preferred (We used a unique api user to easily remove all logs when accessing the logs)
+- Create a certificate: `https://wiki.mikrotik.com/wiki/Manual:Create_Certificates`
+- Enable the API-SSL service to allow api access to retrieve the logs:
+  ```
+  /ip service enable api
+  /ip service set api-ssl certificate=**ssl_cert_name**
+  ```
 - create a Snapshot after setup, so the honeypot can be restored to the current state.
 - Write down the name of the Virtual Machine and the snapshot
 

@@ -10,6 +10,7 @@ import tablib
 # config
 # change these values before running the script
 routeros_6_43_or_higher = False
+honeypot_name = "HONEYPOT" #should be in uppercase
 username = 'admin'
 password = ''
 host = '192.168.0.1' # ip of the routeros router
@@ -101,7 +102,7 @@ try:
     # retrieve the current date for the filename
     date = str(datetime.datetime.now())
     # store as logs-**datetime**.xlsx in the logs folder
-    open(log_dir + 'logs-' + date + '.xlsx', 'wb').write(db.xlsx)
+    open(log_dir + 'logs-' + honeypot_name + '-' +  date + '.xlsx', 'wb').write(db.xlsx)
 except Exception as e:
     # print the stacktrace
     print(e)

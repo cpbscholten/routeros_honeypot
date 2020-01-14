@@ -4,7 +4,7 @@
 # config: Update these values
 # duration of the capture (10 minutes)
 timespan=600
-# name of the honeypot
+# name of the honeypot (should be uppercase)
 honeypot_name="HONEYPOT"
 # capture destination directory
 filename="/home/honeypot/tcpdump/"

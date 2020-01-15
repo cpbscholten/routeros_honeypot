@@ -8,4 +8,4 @@ All collected data is synchronized every hour to a central machine to collect th
 ## Setup
 This repository contains two directories, honeypot and collector. The honeypot directory contains all code to set up a complete honeypot and the collector directory contains all code necessary to collect, filter and analyze the traffic collected by each honeypot.
 
-It is recommended to first create a working honeypot and then set up a collector machine next.
+It is recommended to first create a working honeypot and then set up a collector machine next. Both the collector and honeypot directories contain a Readme file with more instructions to set up a honeypot.

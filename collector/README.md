@@ -1,7 +1,7 @@
 # Collector scripts
 This directory contains all scripts and configuration files for the collector computer. This computer is used to collect all data from the honeypots. It also filters and merges to collected data.
 
-## requirements
+## Requirements
 - cron
 - python3
 - pip3
@@ -90,7 +90,7 @@ Update in the script:
 - Update the `dest_dir` variable to point to destination directory to output the parsed .csv files to.
 - Update the `pcap_dir` to point to the directory containing the tcpdump .pcap files.
 
-## crontab
+## Crontab
 In order to automatically run all scripts, some modifications need to be made to the crontab.
 
 Copy line 7 and 8 for each extra honeypot you might want to add, update the ip adress and the name of the honeypot. Ensure that a subdirectory exists in the tcpdump and logs directory with the name of the honeypot (This name should be the same as use in the honeypot).
